@@ -1,0 +1,38 @@
+{
+  "name": "tac6",
+  "version": "0.1.0",
+  "description": "Library for in-browser test & coverage for ES6 JavaScript code flavor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "es6",
+    "test",
+    "coverage",
+    "client",
+    "browser"
+  ],
+  "author": "Samuel Goldszmidt <samuel.goldszmidt@gmail.com>",
+  "license": "BSD-3",
+  "devDependencies": {
+    "body-parser": "^1.9.3",
+    "browserify": "^6.3.3",
+    "browserify-istanbul": "git://github.com/ouhouhsami/browserify-istanbul#master",
+    "connect": "^3.3.3",
+    "es6-transpiler": "^0.7.18",
+    "es6ify": "^1.5.1",
+    "install": "^0.1.8",
+    "istanbul": "^0.3.2",
+    "istanbul-traceur": "git://github.com/ouhouhsami/istanbul-traceur#master",
+    "mocha": "^2.0.1",
+    "mocha-traceur": "^2.0.0",
+    "npm": "^2.2.0",
+    "open": "0.0.5",
+    "serve-static": "^1.7.1",
+    "traceur": "0.0.74"
+  },
+  "bin": {
+    "tac6": "./bin/tac6.js"
+  }
+}
