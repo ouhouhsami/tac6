@@ -27,3 +27,13 @@ or
 ```
 
 Then run ```npm test```.
+
+Be careful: I didn't succeed in using Chai assertion library. Chai uses ```arguments.callee``` that is incompatible with es6 to es5 traceur used to build the tests.js file for the in-browser mocha tests.
+
+# Options
+
+--browser or -b "firefox" "Google Chrome" "Safari" ...
+--coverageDir <path the the coverage directory>
+--url default http://0.0.0.0:3000
+--port default to 3000
+--manual if set the user should visit a given link to launch mocha tests.
