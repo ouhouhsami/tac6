@@ -32,8 +32,12 @@ Be careful: I didn't succeed in using Chai assertion library. Chai uses ```argum
 
 # Options
 
---browser or -b "firefox" "Google Chrome" "Safari" ...
+--browser or -b to choose the browser which will run the mocha tests "firefox" "Google Chrome" "Safari" ...
+
 --coverageDir <path the the coverage directory>
+
 --url default http://0.0.0.0:3000
+
 --port default to 3000
---manual if set the user should visit a given link to launch mocha tests.
+
+--manual if set the user should visit a given link to launch mocha tests in your target browser.
