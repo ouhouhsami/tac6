@@ -43,6 +43,9 @@ browserify({
     entry: true
   })
   .bundle(function(err, buf) {
+    if (err) {
+      console.log('\033[0;31m' + '  >  ' + err.message + '\033[0m');
+    }
     var wstream = fs.createWriteStream(targetTestFile);
     wstream.write(buf);
     wstream.end();
