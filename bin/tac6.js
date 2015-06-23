@@ -28,7 +28,7 @@ var fullUrl = url+':'+port;
 var manual = parseArgs['manual'] || false;
 
 var app = connect();
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '10mb'}));
 var server = app.listen(port);
 
 browserify({
