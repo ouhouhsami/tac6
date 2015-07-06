@@ -12,7 +12,7 @@ var open = require('open');
 var bodyParser = require('body-parser');
 var istanbul = require('istanbul');
 var path = require('path');
-var parseArgs = require('minimist')(process.argv.slice(3))
+var parseArgs = require('minimist')(process.argv.slice(3));
 
 var instrumenter = new istanbulTraceur.Instrumenter();
 
@@ -67,7 +67,7 @@ function serve() {
     open(fullUrl, browser);
   }
   else {
-    console.info('Go visit %s  with the browser you want to test.', fullUrl)
+    console.info('Go visit %s  with the browser you want to test.', fullUrl);
   }
 }
 
