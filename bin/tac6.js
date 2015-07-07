@@ -1,20 +1,19 @@
 #!/usr/bin/env node
-
+var babelify = require("babelify")
+var bodyParser = require('body-parser');
 var browserify = require('browserify');
 var browserifyIstanbul = require('browserify-istanbul');
-var es6ify = require('es6ify');
-var fs = require('fs');
-var istanbulTraceur = require('istanbul-traceur');
-var http = require('http');
 var connect = require('connect');
-var serveStatic = require('serve-static');
+var fs = require('fs');
+var http = require('http');
+var istanbul = require('babel-istanbul');
 var open = require('open');
-var bodyParser = require('body-parser');
-var istanbul = require('istanbul');
 var path = require('path');
 var parseArgs = require('minimist')(process.argv.slice(3));
+var serveStatic = require('serve-static');
 
-var instrumenter = new istanbulTraceur.Instrumenter();
+
+var instrumenter = new istanbul.Instrumenter();
 
 var targetFolder = path.join(__dirname, '..', 'browser-test');
 var targetTestFile = path.join(targetFolder, 'tests.js');
@@ -31,14 +30,15 @@ var app = connect();
 app.use(bodyParser.json({limit: '10mb'}));
 var server = app.listen(port);
 
+
+
 browserify({
     debug: true
   })
-  .add(es6ify.runtime)
   .transform(browserifyIstanbul({
     instrumenter: instrumenter
   }))
-  .transform(es6ify)
+  .transform(babelify)
   .require(testFilePath, {
     entry: true
   })

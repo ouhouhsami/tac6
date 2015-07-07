@@ -28,8 +28,6 @@ or
 
 Then run ```npm test```.
 
-Be careful: I didn't succeed in using Chai assertion library. Chai uses ```arguments.callee``` that is incompatible with es6 to es5 traceur used to build the tests.js file for the in-browser mocha tests.
-
 # Options
 
 --browser or -b to choose the browser which will run the mocha tests "firefox" "Google Chrome" "Safari" ...
