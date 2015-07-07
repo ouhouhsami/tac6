@@ -6,3 +6,4 @@ export default class Foo {
         return 'baz';
     }
 }
+
