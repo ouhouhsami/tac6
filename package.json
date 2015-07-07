@@ -20,20 +20,18 @@
     "browserify": "^6.3.3",
     "browserify-istanbul": "ouhouhsami/browserify-istanbul#master",
     "connect": "^3.3.3",
-    "es6-transpiler": "^0.7.18",
-    "es6ify": "^1.5.1",
     "install": "^0.1.8",
-    "istanbul": "^0.3.2",
-    "istanbul-traceur": "ouhouhsami/istanbul-traceur#master",
     "minimist": "^1.1.0",
     "mocha": "^2.0.1",
-    "mocha-traceur": "^2.0.0",
     "npm": "^2.2.0",
     "open": "0.0.5",
     "serve-static": "^1.7.1",
-    "traceur": "0.0.74"
+    "babel-istanbul": "^0.2.9",
+    "babelify": "^6.1.2"
   },
   "bin": {
     "tac6": "./bin/tac6.js"
+  },
+  "devDependencies": {
   }
 }
